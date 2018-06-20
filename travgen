@@ -83,12 +83,12 @@ from traveller.animal import Animal
 from traveller.dice import die
 from traveller.data import (CAREERS, FALLBACK_CAREERS, SKILLS,
                             CHTHONIAN_STARS, DILETTANTE, AGENT,
-                            SCOUNDREL, PSION)
+                            SCOUNDREL, PSION, HOSTILE, DRAFT)
 
 
-#EXPANSIONS = ["Chthonian Stars", "Agent", "Scoundrel", "Dilettante"]
+#EXPANSIONS = ["Chthonian Stars", "Agent", "Scoundrel", "Dilettante", "Hostile"]
 #EXPANSIONS = ["Chthonian Stars"]
-EXPANSIONS = []
+EXPANSIONS = ["Hostile"]
 
 
 def set_expansions(E):
@@ -115,7 +115,20 @@ def set_expansions(E):
             if "Drifter" in FALLBACK_CAREERS:
                 FALLBACK_CAREERS.remove("Drifter")
             FALLBACK_CAREERS.extend(("Wanderer", "Scavenger"))
-
+        if exp == "Hostile":
+            CAREERS.update(HOSTILE)
+            del CAREERS["Marines"]
+            del CAREERS["Rogue"]
+            if "Drifter" in FALLBACK_CAREERS:
+                FALLBACK_CAREERS.remove("Drifter")
+            if "Navy" in DRAFT:
+                DRAFT.remove("Navy")
+            if "Army" in DRAFT:
+                DRAFT.remove("Army")
+            if "Marines" in DRAFT:
+                DRAFT.remove("Marines")
+            DRAFT.extend(("Roughneck", "Ranger"))
+            FALLBACK_CAREERS.extend(("Colonist"))
 
 def up1(text):
     return text[0].upper()+text[1:]
