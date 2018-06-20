@@ -952,7 +952,7 @@ RANKS = {
         (("Medic", 1), ("Medic", 1), ("Medic", 1), None, None, None, None),
     ("Ranger", "Action for Peace"):
         (("Survival", 1), None, None, None, None, None, None),
-    ("HOS_Rouge", "Enforcer"):
+    ("HOS_Rogue", "Enforcer"):
         (("Streetwise", 1), ("Melee (blade)", 1), None, None, None, None, None),
     ("Roughneck", "Freelance Miner"):
         (("Vacc Suit", 1), None, None, None, None, None, None),
@@ -1035,7 +1035,7 @@ BENEFITS = {
                    ("TAS Membership", None),
                    ("Yacht", None),
                    (("Soc", 1), ("Yacht", None))),
-    "Hos_Rogue": (("Ship Shares", 1),
+    "Rogue": (("Ship Shares", 1),
                   ("Weapon", None),
                   ("Int", 1),
                   ("Ship Shares", 2),
@@ -1140,7 +1140,7 @@ BENEFITS = {
                   ("Soc", 1),
                   ("Weapon", None),
                   ("Star Envoy Club Member", None)),
-    "Rogue": (("Standard Ticket", None),
+    "HOS_Rogue": (("Standard Ticket", None),
               ("Soc", 1),
               ("Weapon", None),
               ("Weapon", None),
@@ -1201,8 +1201,21 @@ CREDITS = {
     "Explorer": (20000, 20000, 30000, 30000, 50000, 50000, 50000),
     "Psion": (1000, 2000, 4000, 4000, 8000, 8000, 16000),
     "Warden": (1000, 2000, 5000, 7500, 10000, 25000, 50000),
-    "Hostile_Default": (500, 1000, 1000, 5000, 8000, 10000, 20000),
-    "Hostile_Android": (5000, 1000, 'Standard Ticket', 'Standard Ticket', 8000, 1000, 5000),
+    "Corporate Agent": (500, 1000, 1000, 5000, 8000, 10000, 20000),
+    "Corporate Exec": (500, 1000, 1000, 5000, 8000, 10000, 20000),
+    "Colonist": (500, 1000, 1000, 5000, 8000, 10000, 20000),
+    "Commercial Spacer": (500, 1000, 1000, 5000, 8000, 10000, 20000),
+    "Marine": (500, 1000, 1000, 5000, 8000, 10000, 20000),
+    "Marshal": (500, 1000, 1000, 5000, 8000, 10000, 20000),
+    "Military Spacer": (500, 1000, 1000, 5000, 8000, 10000, 20000),
+    "Physician": (500, 1000, 1000, 5000, 8000, 10000, 20000),
+    "Ranger": (500, 1000, 1000, 5000, 8000, 10000, 20000),
+    "HOS_Rogue": (500, 1000, 1000, 5000, 8000, 10000, 20000),
+    "Roughneck": (500, 1000, 1000, 5000, 8000, 10000, 20000),
+    "Scientist": (500, 1000, 1000, 5000, 8000, 10000, 20000),
+    "Survey Scout": (500, 1000, 1000, 5000, 8000, 10000, 20000),
+    "Technician": (500, 1000, 1000, 5000, 8000, 10000, 20000),
+    "Android": (5000, 1000, 'Standard Ticket', 'Standard Ticket', 8000, 1000, 5000),
 }
 
 AGING = (
