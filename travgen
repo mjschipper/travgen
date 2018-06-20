@@ -117,7 +117,6 @@ def set_expansions(E):
             FALLBACK_CAREERS.extend(("Wanderer", "Scavenger"))
         if exp == "Hostile":
             CAREERS.update(HOSTILE)
-            del CAREERS["Marines"]
             del CAREERS["Rogue"]
             if "Drifter" in FALLBACK_CAREERS:
                 FALLBACK_CAREERS.remove("Drifter")
