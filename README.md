@@ -46,13 +46,13 @@ Run without options, the character generator will return a full character, compl
 
     $ travgen char
 
-    Santuniz, Verna
-    Female Belter (American), age 30
-    UPP: 847679 [6.8]
-    Career Path: Drifter (Wanderer) [Rank 2]
-    Skills: Art 0, Athletics 2, Carouse 0, Deception 1, Recon 0, Social Science 0, Stealth 0, Streetwise 2, Survival 0
-    Benefits: Ally x1
-    Random seed: cd515598
+    Di Stefano, Frana
+    Female Wild Catter (Sicilian), age 30
+    UPP: 55a669 [6.8]
+    Career Path: Marine (USMC) [Rank 2]
+    Skills: Advocate 0, Art 0, Drive 1, Gun Combat 0, Medic 1, Recon 0, Survival 0, Trade 0, Vacc Suit 0
+    Benefits: 500 Cr., Star Envoy Club Member x1, Silver Star x1
+    Random seed: -633c0b7a
 
 Character stats are presented in UPP format, and may be generated with a variety of ways with the `--method` parameter. The number in brackets '[...]' is the average of the attributes. The same methods are available for generating UPPs only with `travgen UPP`.
 
@@ -83,12 +83,12 @@ The `--show-hist` option returns a narrative description of the steps taken duri
 
 Career choices may be prespecified at the command line, with careers and specializations separated by a single colon ":" and terms separated by a double colon "::", as shown below. Note that this does not guarantee that the character will generate with this career path; if the character fails to qualify for a career or has a mishap, random career choice will occur. Career paths can be partially specified, replacing any career or specialization with "-". The following command will attempt to generate a character with a random first term and second and subsequent terms as a Warden Enforcer.
 
-    $ travgen char -p "-:-::Warden:Enforcer"
+    $ travgen char -p "-:-::Technician:-"
 
-    Beneš, Hana
-    Female Enceladian (Czech), age 30
-    UPP: 939aa7 [8.0]
-    Career Path: Marines (Star Marines) [Rank 1], Warden (Enforcer) [Rank 2]
+    Wilson, Petephew
+    Male Earther (British), age 30
+    UPP: 464968 [6.2]
+    Career Path: Technician (Freelance Miner) [Rank 0]
     ...
 
 The remaining options are largely self-explanatory. Random names are similar to, but often not exactly the same as, modern names of a random Earth ethnicity. The `--rand-age` parameter will cause starting ages to fluctuate slightly, for a more 'realistic' starting age. The `--max-careers` option allows one to specify an upper limit on the number of careers that a character goes through, effectively generating a series of characters until one is found that meets the condition. The `--personality` parameter is for comedic value, and provides some random personality quirks, along with a Meyers-Briggs personality profile.
@@ -133,7 +133,7 @@ Installation
 
 Standard Python package installation.
 
-    > git clone http://github.org/gruevyhat/travgen.git
+    > git clone http://github.com/mschippr/travgen.git
     > cd travgen
     > python setup.py install
 
