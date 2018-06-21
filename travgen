@@ -95,6 +95,7 @@ def set_expansions(E):
     global CAREERS
     global FALLBACK_CAREERS
     global SKILLS
+    global DRAFT
     for exp in E:
         if exp == "Chthonian Stars":
             CAREERS.update(CHTHONIAN_STARS)
@@ -116,18 +117,13 @@ def set_expansions(E):
                 FALLBACK_CAREERS.remove("Drifter")
             FALLBACK_CAREERS.extend(("Wanderer", "Scavenger"))
         if exp == "Hostile":
+            CAREERS.clear()
+            #DRAFT.clear()
             CAREERS.update(HOSTILE)
-            del CAREERS["Rogue"]
             if "Drifter" in FALLBACK_CAREERS:
                 FALLBACK_CAREERS.remove("Drifter")
-            if "Navy" in DRAFT:
-                DRAFT.remove("Navy")
-            if "Army" in DRAFT:
-                DRAFT.remove("Army")
-            if "Marines" in DRAFT:
-                DRAFT.remove("Marines")
-            DRAFT.extend(("Roughneck", "Ranger"))
-            FALLBACK_CAREERS.extend(("Colonist"))
+            #DRAFT.extend(("Roughneck", "Ranger"))
+            FALLBACK_CAREERS.extend("Colonist")
 
 def up1(text):
     return text[0].upper()+text[1:]
