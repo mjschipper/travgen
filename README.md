@@ -1,7 +1,7 @@
-Travgen 0.0.10 - Fork with mods for HOSTILE tropes: https://www.paulelliottbooks.com/hostile.html
+Travgen 0.0.10 - Fork with added support for HOSTILE: https://www.paulelliottbooks.com/hostile.html
 =============
 
-A gamemaster toolkit for HOSTILE, a campaign setting for Mongoose Traveller(c). The script generates random characters complete with name, gender, UPP, ethnicity, planet of origin, skills, and career path. CT and MGT books are still required for generation of events, and the fleshing out of other details. The scripts also provide functionality for animal generation, UPP generation, and generic dice rolling.
+A gamemaster toolkit for Traveller and compatible campaign settings for Mongoose Traveller(c). The script generates random characters complete with name, gender, UPP, ethnicity, planet of origin, skills, and career path. CT and MGT books are still required for generation of events, and the fleshing out of other details. The scripts also provide functionality for animal generation, UPP generation, and generic dice rolling.
 
 
 Usage: Character Generation
