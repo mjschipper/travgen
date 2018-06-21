@@ -83,7 +83,8 @@ from traveller.animal import Animal
 from traveller.dice import die
 from traveller.data import (CAREERS, FALLBACK_CAREERS, SKILLS,
                             CHTHONIAN_STARS, DILETTANTE, AGENT,
-                            SCOUNDREL, PSION, HOSTILE, DRAFT)
+                            SCOUNDREL, PSION, HOSTILE, DRAFT,
+                            WORLDS, HOSTILE_WORLDS,)
 
 
 #EXPANSIONS = ["Chthonian Stars", "Agent", "Scoundrel", "Dilettante", "Hostile"]
@@ -96,6 +97,7 @@ def set_expansions(E):
     global FALLBACK_CAREERS
     global SKILLS
     global DRAFT
+    global WORLDS
     for exp in E:
         if exp == "Chthonian Stars":
             CAREERS.update(CHTHONIAN_STARS)
@@ -118,12 +120,25 @@ def set_expansions(E):
             FALLBACK_CAREERS.extend(("Wanderer", "Scavenger"))
         if exp == "Hostile":
             CAREERS.clear()
-            #DRAFT.clear()
             CAREERS.update(HOSTILE)
+            WORLDS.clear()
+            WORLDS.update(HOSTILE_WORLDS)
             if "Drifter" in FALLBACK_CAREERS:
                 FALLBACK_CAREERS.remove("Drifter")
-            #DRAFT.extend(("Roughneck", "Ranger"))
-            FALLBACK_CAREERS.extend("Colonist")
+            if "Army" in FALLBACK_CAREERS:
+                FALLBACK_CAREERS.remove("Army")
+            if "Marines" in FALLBACK_CAREERS:
+                FALLBACK_CAREERS.remove("Marines")
+            if "Navy" in FALLBACK_CAREERS:
+                FALLBACK_CAREERS.remove("Navy")
+            if "Army" in DRAFT:
+                DRAFT.remove("Army")
+            if "Marines" in DRAFT:
+                DRAFT.remove("Marines")
+            if "Navy" in DRAFT:
+                DRAFT.remove("Navy")
+            DRAFT.extend(("Roughneck", "Ranger", "Colonist"))
+            FALLBACK_CAREERS.extend(("Roughneck", "Ranger", "Colonist"))
 
 def up1(text):
     return text[0].upper()+text[1:]
