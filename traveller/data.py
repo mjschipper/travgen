@@ -760,10 +760,6 @@ SKILLS = {
     #                            ("Computers", 0)),
 }
 
-COMMISSIONS = {
-
-}
-
 RANKS = {
     ("Warden", "Enforcer"):
         (None, ("Occult", 1), None, ("Investigate", 1), None, ("Leadership", 1), ("Soc", 1)),
@@ -1117,13 +1113,13 @@ BENEFITS = {
                   ("Edu", 1),
                   ("Int", 2),
                   ("Elite Ticket", None)),
-    "Android": (("Gun", None),
-                ("5000", None),
-                ("1000", None),
-                ("Standard Ticket", None),
-                ("Standard Ticket", None),
-                ("1000", None),
-                ("5000", None)),
+    #"Android": (("Gun", None),
+    #            ("5000", None),
+    #            ("1000", None),
+    #            ("Standard Ticket", None),
+    #            ("Standard Ticket", None),
+    #            ("1000", None),
+    #            ("5000", None)),
     "Ranger": (("Standard Ticket", None),
                ("Standard Ticket", None),
                ("Weapon", None),
@@ -1164,7 +1160,7 @@ CREDITS = {
     "Scientist": (500, 1000, 1000, 5000, 8000, 10000, 20000),
     "Survey Scout": (500, 1000, 1000, 5000, 8000, 10000, 20000),
     "Technician": (500, 1000, 1000, 5000, 8000, 10000, 20000),
-    "Android": (5000, 1000, 'Standard Ticket', 'Standard Ticket', 8000, 1000, 5000),
+    #"Android": (5000, 1000, 'Standard Ticket', 'Standard Ticket', 8000, 1000, 5000),
 }
 
 AGING = (
