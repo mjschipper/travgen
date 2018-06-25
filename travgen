@@ -84,7 +84,8 @@ from traveller.dice import die
 from traveller.data import (CAREERS, FALLBACK_CAREERS, SKILLS,
                             CHTHONIAN_STARS, DILETTANTE, AGENT,
                             SCOUNDREL, PSION, HOSTILE, DRAFT,
-                            WORLDS, HOSTILE_WORLDS,)
+                            WORLDS, HOSTILE_WORLDS, EDU_SKILLS,
+                            HOSTILE_EDU_SKILLS)
 
 
 #EXPANSIONS = ["Chthonian Stars", "Agent", "Scoundrel", "Dilettante", "Hostile"]
@@ -97,7 +98,7 @@ def set_expansions(E):
     global FALLBACK_CAREERS
     global SKILLS
     global DRAFT
-    global WORLDS
+    global EDU_SKILLS
     for exp in E:
         if exp == "Chthonian Stars":
             CAREERS.update(CHTHONIAN_STARS)
@@ -120,25 +121,15 @@ def set_expansions(E):
             FALLBACK_CAREERS.extend(("Wanderer", "Scavenger"))
         if exp == "Hostile":
             CAREERS.clear()
-            CAREERS.update(HOSTILE)
             WORLDS.clear()
+            del EDU_SKILLS[:]
+            del FALLBACK_CAREERS[:]
+            del DRAFT[:]
+            CAREERS.update(HOSTILE)
             WORLDS.update(HOSTILE_WORLDS)
-            if "Drifter" in FALLBACK_CAREERS:
-                FALLBACK_CAREERS.remove("Drifter")
-            if "Army" in FALLBACK_CAREERS:
-                FALLBACK_CAREERS.remove("Army")
-            if "Marines" in FALLBACK_CAREERS:
-                FALLBACK_CAREERS.remove("Marines")
-            if "Navy" in FALLBACK_CAREERS:
-                FALLBACK_CAREERS.remove("Navy")
-            if "Army" in DRAFT:
-                DRAFT.remove("Army")
-            if "Marines" in DRAFT:
-                DRAFT.remove("Marines")
-            if "Navy" in DRAFT:
-                DRAFT.remove("Navy")
-            DRAFT.extend(("Roughneck", "Ranger", "Colonist"))
+            EDU_SKILLS = HOSTILE_EDU_SKILLS
             FALLBACK_CAREERS.extend(("Roughneck", "Ranger", "Colonist"))
+            DRAFT.extend(("Roughneck", "Ranger", "Colonist"))
 
 def up1(text):
     return text[0].upper()+text[1:]

@@ -5,13 +5,13 @@ from dice import d6
 from attributes import STATS
 from data import *
 
-
 STARTING_SKILLS = 3
 COMMISSION = 8
 FIELDS = ('T', 'Career', 'Spec', 'Q', 'S', 'A', 'Edu', 'BT', 'SR', 'Rnk', 'EM', 'Age', 'Ben')
-TERM = {f:None for f in FIELDS}
+TERM = {f: None for f in FIELDS}
 
-def closest_careers(stats, n = None):
+
+def closest_careers(stats, n=None):
     A = []
     for car, d_car in CAREERS.items():
         for spec, d_spec in d_car.items():
@@ -26,7 +26,7 @@ def closest_careers(stats, n = None):
 
 class CareerPath(object):
 
-    def __init__(self, character, terms = 3, path = None):
+    def __init__(self, character, terms=3, path=None):
         self.stats = character.stats
         self.skills = character.skills
         self.homeworld = character.homeworld
@@ -44,13 +44,13 @@ class CareerPath(object):
         self.generate()
 
     def __repr__(self):
-        P = [FIELDS] + [ [ self.terms[i][f] for f in FIELDS ] for i in range(len(self.terms)) ]
-        P = [ [ ('-' if c is None else str(c).replace('True', 'Y').replace('False', 'N')) for c in r ] for r in P ]
-        tmpl = ''.join(('%%-%ds' % s for s in [ max((len(z) for z in y)) + 2 for y in zip(*P) ]))
+        P = [FIELDS] + [[self.terms[i][f] for f in FIELDS] for i in range(len(self.terms))]
+        P = [[('-' if c is None else str(c).replace('True', 'Y').replace('False', 'N')) for c in r] for r in P]
+        tmpl = ''.join(('%%-%ds' % s for s in [max((len(z) for z in y)) + 2 for y in zip(*P)]))
         return '\n'.join((tmpl % tuple(p) for p in P))
 
     def build_term_table(self):
-        self.terms = [ TERM.copy() for i in range(self.n) ]
+        self.terms = [TERM.copy() for i in range(self.n)]
         for n in range(self.n):
             self.terms[n]['T'] = n
 
@@ -65,7 +65,7 @@ class CareerPath(object):
                         s = choice(CAREERS[c].keys())
                     self.terms[i]['Spec'] = s
                 else:
-                    #print "Can't find career '%s'!" % c
+                    # print "Can't find career '%s'!" % c
                     self.terms[i]['Career'] = None
                     self.terms[i]['Spec'] = None
 
@@ -75,8 +75,8 @@ class CareerPath(object):
         edu = STARTING_SKILLS + self.stats.Edu()
         for n in range(self.n):
             if n == 0:
-                skill_list = set(EDU_SKILLS + [ (s, 0)
-                    for s in WORLDS[self.homeworld] ])
+                skill_list = set(EDU_SKILLS + [(s, 0)
+                                               for s in WORLDS[self.homeworld]])
                 skills = sample(skill_list, edu)
                 for skill, n in skills:
                     self.history += [' Learned %s %d from Education.' % (skill, n)]
@@ -95,7 +95,7 @@ class CareerPath(object):
             if s not in CAREERS[c]:
                 self.terms[n]['Spec'] = choice(CAREERS[c].keys())
 
-    def get_career(self, n, fallback = False):
+    def get_career(self, n, fallback=False):
         career = self.terms[n]['Career']
         spec = self.terms[n]['Spec']
         if fallback:
@@ -109,7 +109,7 @@ class CareerPath(object):
             c = self.terms[n - 1]['Career']
             s = self.terms[n - 1]['Spec']
         else:
-            closest = [ cl for cl in self.closest if cl[1] not in self.attempted and not cl[1].endswith('Officer') ][:5]
+            closest = [cl for cl in self.closest if cl[1] not in self.attempted and not cl[1].endswith('Officer')][:5]
             if closest:
                 _, c, s = choice(closest)
             else:
@@ -117,7 +117,7 @@ class CareerPath(object):
                 s = choice(CAREERS[c].keys())
         self.terms[n]['Career'] = c
         self.terms[n]['Spec'] = s
-        self.prev = set([ self.terms[i]['Career'] for i in range(n) ])
+        self.prev = set([self.terms[i]['Career'] for i in range(n)])
 
     def get_term(self, n):
         career = self.terms[n]['Career']
@@ -186,7 +186,7 @@ class CareerPath(object):
             rank += 1
             self.history += [' Promoted to Rank %d.' % rank]
         self.terms[n]['Rnk'] = rank
-        career = self.terms[n]['Career'] #.replace(' Officer', '')
+        career = self.terms[n]['Career']  # .replace(' Officer', '')
         spec = self.terms[n]['Spec']
         if spec not in CAREERS[career]:
             spec = choice(CAREERS[career].keys())
