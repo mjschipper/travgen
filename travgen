@@ -137,7 +137,6 @@ def set_expansions(E):
             RANKS.update(HOSTILE_RANKS)
             BENEFITS.update(HOSTILE_BENEFITS)
             CREDITS.update(HOSTILE_CREDITS)
-
             EDU_SKILLS = HOSTILE_EDU_SKILLS
             FALLBACK_CAREERS.extend(("Drifter",))
             DRAFT.extend(("Roughneck", "Ranger", "Colonist"))

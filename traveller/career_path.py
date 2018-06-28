@@ -129,7 +129,7 @@ class CareerPath(object):
         self.survive(n, career_table)
         self.skill_roll(career, spec)
         self.events_and_mishaps(n)
-        if career in DRAFT and self.stats.Soc() >= 1:
+        if career + ' Officer' in CAREERS and self.stats.Soc() >= 1:
             self.get_commission(n, career)
         else:
             self.advance(n, career_table)
@@ -157,7 +157,6 @@ class CareerPath(object):
             self.history += [' Experienced an Event (Roll=%d,%d).' % r]
 
     def get_commission(self, n, career):
-        #if career + ' Officer' in CAREERS:
             #adv, adv_roll = self.stat_check(career_table, 'Com', roll=True)
             comm = self.stats.Soc.roll() >= COMMISSION
             if comm:
