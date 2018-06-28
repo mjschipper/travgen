@@ -196,53 +196,38 @@ DILETTANTE = {
 }
 
 HOSTILE = {
-    'Corporate Agent': {
+    'CorporateAgent': {
         'Intelligence': {'Surv': ('Dex', 5), 'Qual': ('Int', 6), 'Adv': ('Int', 7)}},
-# 'Com': ('Soc', 5), 'ReE': ('ReE', 5)}},
     'Marshal': {
         'Colonial Marshal': {'Surv': ('Dex', 6), 'Qual': ('Int', 7), 'Adv': ('Int', 7)}},
-# 'Com': ('Edu', 8), 'ReE': ('ReE', 5)}},
     'Physician': {
         'Medical': {'Surv': ('Int', 3), 'Qual': ('Int', 9), 'Adv': ('Edu', 8)}},
-# 'Com': ('Edu', 6), 'ReE': ('ReE', 4)}},
-    'Military Spacer': {
-        'PMC': {'Surv': ('Int', 5), 'Qual': ('Int', 6), 'Adv': ('Edu', 6)}},  # 'Com': ('Soc', 7), 'ReE': ('ReE', 5)}},
-    'Military Spacer Officer': {
-        'PMC': {'Surv': ('Int', 5), 'Qual': ('Int', 6), 'Adv': ('Edu', 6)}},  # 'Com': ('Soc', 7), 'ReE': ('ReE', 5)}},
+    'MilitarySpacer': {
+        'PMC': {'Surv': ('Int', 5), 'Qual': ('Int', 6), 'Adv': ('Edu', 6)}},
+    'MilitarySpacer Officer': {
+        'PMC': {'Surv': ('Int', 5), 'Qual': ('Int', 6), 'Adv': ('Edu', 6)}},
     'Technician': {
         'Freelance Miner': {'Surv': ('Int', 4), 'Qual': ('Edu', 7), 'Adv': ('Edu', 8)}},
-# 'Com': ('Edu', 4), 'ReE': ('ReE', 5)}},
     'Marine': {
-        'USMC': {'Surv': ('End', 6), 'Qual': ('Int', 4), 'Adv': ('Edu', 6)}},  # 'Com': ('Edu', 9), 'ReE': ('ReE', 6)}},
+        'USMC': {'Surv': ('End', 6), 'Qual': ('Int', 4), 'Adv': ('Edu', 6)}},
     'Marine Officer': {
-        'USMC': {'Surv': ('End', 6), 'Qual': ('Int', 4), 'Adv': ('Edu', 6)}},  # 'Com': ('Edu', 9), 'ReE': ('ReE', 6)}},
+        'USMC': {'Surv': ('End', 6), 'Qual': ('Int', 4), 'Adv': ('Edu', 6)}},
     'Scientist': {
-        'ICO': {'Surv': ('Int', 3), 'Qual': ('Edu', 6), 'Adv': ('Edu', 8)}},  # 'Com': ('Edu', 5), 'ReE': ('ReE', 5)}},
-    'Survey Scout': {
-        'MRA': {'Surv': ('End', 7), 'Qual': ('Str', 7), 'Adv': ('End', 8)}},  # 'Com': ('Int', 4), 'ReE': ('ReE', 3)}},
-    'Commercial Spacer': {
+        'ICO': {'Surv': ('Int', 3), 'Qual': ('Edu', 6), 'Adv': ('Edu', 8)}},
+    'SurveyScout': {
+        'MRA': {'Surv': ('End', 7), 'Qual': ('Str', 7), 'Adv': ('End', 8)}},
+    'CommercialSpacer': {
         'Wanderer': {'Surv': ('Int', 5), 'Qual': ('Int', 4), 'Adv': ('Edu', 8)}},
-# 'Com': ('Int', 5), 'ReE': ('ReE', 4)}},
-    'HOS_Rogue': {
+    'Rogue': {
         'Enforcer': {'Surv': ('Int', 6), 'Qual': ('End', 6), 'Adv': ('Int', 6)}},
-# 'Com': ('Str', 8), 'ReE': ('ReE', 5)}},
     'Roughneck': {
         'Freelance Miner': {'Surv': ('Int', 6), 'Qual': ('Dex', 8), 'Adv': ('End', 7)}},
-# 'Com': ('Str', 8), 'ReE': ('ReE', 7)}},
     'Colonist': {
-        'UCC': {'Surv': ('End', 6), 'Qual': ('End', 5), 'Adv': ('Edu', 6)}},  # 'Com': ('Int', 7), 'ReE': ('ReE', 5)}},
-    'Corporate Executive': {
-        'ICO': {'Surv': ('Soc', 4), 'Qual': ('Soc', 8), 'Adv': ('Int', 10)}},  # 'Com': ('Edu', 5), 'ReE': ('ReE', 6)}},
+        'UCC': {'Surv': ('End', 6), 'Qual': ('End', 5), 'Adv': ('Edu', 6)}},
+    'CorporateExecutive': {
+        'ICO': {'Surv': ('Soc', 4), 'Qual': ('Soc', 8), 'Adv': ('Int', 10)}},
     'Ranger': {
-        'Action for Peace': {'Surv': ('Str', 6), 'Qual': ('End', 9), 'Adv': ('End', 6)}},
-# 'Com': ('Int', 5), 'ReE': ('ReE', 5)}},
-#    'Android': {
-#        'Commercial Spacer': {'Surv': ('Soc', None), 'Qual': ('End', None), 'Adv': ('Int', None)},
-#        'Military Spacer': {'Surv': ('Soc', None), 'Qual': ('End', None), 'Adv': ('Int', None)},
-#        'Survey Scout': {'Surv': ('Soc', None), 'Qual': ('End', None), 'Adv': ('Int', None)},
-#        'Physician': {'Surv': ('Soc', None), 'Qual': ('End', None), 'Adv': ('Int', None)},
-#        'Scientist': {'Surv': ('Soc', None), 'Qual': ('End', None), 'Adv': ('Int', None)},
-#        'Technician': {'Surv': ('Soc', None), 'Qual': ('End', None), 'Adv': ('Int', None)}}
+        'APF': {'Surv': ('Str', 6), 'Qual': ('End', 9), 'Adv': ('End', 6)}},
 }
 
 DRAFT = ["Army", "Navy", "Marines"]
@@ -687,11 +672,14 @@ SKILLS = {
                                ("Teleportation", 0), ("Gun Combat", 0), ("Battle Dress", 0), ("Recon", 0),
                                ("Comms", 0), ("Computers", 0), ("Language", 0), ("Medic", 0),
                                ("Life Science", 0), ("Space Science", 0)),
-    ("Corporate Agent", "Intelligence"): (("Gun Combat", 0), ("Vacc Suit", 0), ("Vehicle", 0), ("Streetwise", 0), ("Gun Combat", 0), ("Recon", 0),
+}
+
+HOSTILE_SKILLS = {
+    ("CorporateAgent", "Intelligence"): (("Gun Combat", 0), ("Vacc Suit", 0), ("Vehicle", 0), ("Streetwise", 0), ("Gun Combat", 0), ("Recon", 0),
                 ("Str", 1), ("Dex", 1), ("Bribery", 0), ("Int", 1), ("Edu", 1), ("Soc", 1),
                 ("Forgery", 0), ("Investigate", 0), ("Computers", 0), ("Carouse", 0), ("Comms", 0), ("Jack of all Trades", 0),
                 ("Medic", 0), ("Security", 0), ("Admin", 0), ("Computers", 0), ("Leadership", 0), ("Tactics", 0)),
-    ("Corporate Executive", "ICO"): (("Gambler", 0), ("Admin", 0), ("Carouse", 0), ("Leadership", 0), ("Bribery", 0), ("Forgery", 0),
+    ("CorporateExecutive", "ICO"): (("Gambler", 0), ("Admin", 0), ("Carouse", 0), ("Leadership", 0), ("Bribery", 0), ("Forgery", 0),
                 ("Streetwise", 0), ("Int", 1), ("Edu", 1), ("Soc", 1), ("Carouse", 0), ("Bribery", 0),
                 ("Broker", 0), ("Liaison", 0), ("Vehicle", 0), ("Broker", 0), ("Computers", 0), ("Leadership", 0),
                 ("Medic", 0), ("Computers", 0), ("Admin", 0), ("Liaison", 0), ("Leadership", 0), ("Jack of all Trades", 0)),
@@ -699,7 +687,7 @@ SKILLS = {
                 ("Str", 1), ("Dex", 1), ("End", 1), ("Int", 1), ("Brawling", 0), ("Gun Combat", 0),
                 ("Loader", 0), ("Carouse", 0), ("Jack of all Trades", 0), ("Engineer", 0), ("Agriculture", 0), ("Drive", 0),
                 ("Medic", 0), ("Agriculture", 0), ("Jack of all Trades", 0), ("Liaison", 0), ("Admin", 0), ("Leadership", 0)),
-    ("Commercial Spacer", "Wanderer"): (("Comms", 0), ("Bribery", 0), ("Gun Combat", 0), ("Loader", 0), ("Broker", 0), ("Vehicle", 0),
+    ("CommercialSpacer", "Wanderer"): (("Comms", 0), ("Bribery", 0), ("Gun Combat", 0), ("Loader", 0), ("Broker", 0), ("Vehicle", 0),
                 ("Str", 1), ("Dex", 1), ("End", 1), ("Str", 1), ("Brawling", 0), ("Vacc Suit", 0),
                 ("Vacc Suit", 0), ("Mechanic", 0), ("Loader", 0), ("Electronics", 0), ("Steward", 0), ("Navigation", 0),
                 ("Medic", 0), ("Computers", 0), ("Broker", 0), ("Pilot", 0), ("Engineer", 0), ("Navigation", 0)),
@@ -711,7 +699,7 @@ SKILLS = {
                 ("Str", 1), ("Dex", 1), ("End", 1), ("Int", 1), ("Edu", 1), ("Soc", 1),
                 ("Gun Combat", 0), ("Comms", 0), ("Ground Vehicle", 0), ("Security", 0), ("Computers", 0), ("Medic", 0),
                 ("Medic", 0), ("Tactics", 0), ("Investigate", 0), ("Computers", 0), ("Tactics", 0), ("Admin", 0)),
-    ("Military Spacer", "PMC"): (("Vacc Suit", 0), ("Computers", 0), ("Vacc Suit", 0), ("Gunner", 0), ("Brawling", 0), ("Gun Combat", 0),
+    ("MilitarySpacer", "PMC"): (("Vacc Suit", 0), ("Computers", 0), ("Vacc Suit", 0), ("Gunner", 0), ("Brawling", 0), ("Gun Combat", 0),
                 ("Str", 1), ("Dex", 1), ("End", 1), ("Int", 1), ("Edu", 1), ("Soc", 1),
                 ("Gunner", 0), ("Mechanic", 0), ("Electronics", 0), ("Engineer", 0), ("Gunner", 0), ("Comms", 0),
                 ("Medic", 0), ("Navigation", 0), ("Engineer", 0), ("Computers", 0), ("Pilot", 0), ("Admin", 0)),
@@ -719,11 +707,11 @@ SKILLS = {
                 ("Str", 1), ("Dex", 1), ("End", 1), ("Int", 1), ("Edu", 1), ("Soc", 1),
                 ("Liaison", 0), ("Investigate", 0), ("Mechanic", 0), ("Electronics", 0), ("Computers", 0), ("Admin", 0),
                 ("Liaison", 0), ("Medic", 0), ("Admin", 0), ("Computers", 0), ("Int", 1), ("Edu", 1)),
-    ("Ranger", "Action for Peace"): (("Gun Combat", 0), ("Gun Combat", 0), ("Survival", 0), ("Recon", 0), ("Vehicle", 0), ("Survival", 0),
+    ("Ranger", "APF"): (("Gun Combat", 0), ("Gun Combat", 0), ("Survival", 0), ("Recon", 0), ("Vehicle", 0), ("Survival", 0),
                 ("Str", 1), ("Dex", 1), ("End", 1), ("Int", 1), ("Gun Combat", 0), ("Blade Combat", 0),
                 ("Mechanic", 0), ("Electronics", 0), ("Comms", 0), ("Recon", 0), ("Vehicle", 0), ("Survival", 0),
                 ("Medic", 0), ("Computers", 0), ("Jack of all Trades", 0), ("Leadership", 0), ("Medic", 0), ("Mechanic", 0)),
-    ("HOS_Rogue", "Enforcer"): (("Blade Combat", 0), ("Gun Combat", 0), ("Brawling", 0), ("Vehicle", 0), ("Recon", 0), ("Vehicle", 0),
+    ("Rogue", "Enforcer"): (("Blade Combat", 0), ("Gun Combat", 0), ("Brawling", 0), ("Vehicle", 0), ("Recon", 0), ("Vehicle", 0),
                 ("Str", 1), ("Dex", 1), ("End", 1), ("Brawling", 0), ("Blade Combat", 0), ("Carouse", 0),
                 ("Streetwise", 0), ("Bribery", 0), ("Forgery", 0), ("Demolitions", 0), ("Security", 0), ("Blade Combat", 0),
                 ("Tactics", 0), ("Bribery", 0), ("Forgery", 0), ("Computers", 0), ("Leadership", 0), ("Jack of all Trades", 0)),
@@ -735,7 +723,7 @@ SKILLS = {
                 ("Str", 1), ("Dex", 1), ("End", 1), ("Int", 1), ("Edu", 1), ("Int", 1),
                 ("Mechanic", 0), ("Electronics", 0), ("Vacc Suit", 0), ("Computers", 0), ("Investigate", 0), ("Vehicle", 0),
                 ("Medic", 0), ("Computers", 0), ("Admin", 0), ("Leadership", 0), ("Navigation", 0), ("Jack of all Trades", 0)),
-    ("Survey Scout", "MRA"): (("Vehicle", 0), ("Vacc Suit", 0), ("Mechanic", 0), ("Mining", 0), ("Comms", 0), ("Mining", 0),
+    ("SurveyScout", "MRA"): (("Vehicle", 0), ("Vacc Suit", 0), ("Mechanic", 0), ("Mining", 0), ("Comms", 0), ("Mining", 0),
                 ("Str", 1), ("Dex", 1), ("End", 1), ("Int", 1), ("Edu", 1), ("Gun Combat", 0),
                 ("Vehicle", 0), ("Mechanic", 0), ("Electronics", 0), ("Investigate", 0), ("Gunner", 0), ("Medic", 0),
                 ("Medic", 0), ("Navigation", 0), ("Engineer", 0), ("Computers", 0), ("Pilot", 0), ("Jack of all Trades", 0)),
@@ -743,24 +731,6 @@ SKILLS = {
                 ("Str", 1), ("Dex", 1), ("End", 1), ("Int", 1), ("Edu", 1), ("Edu", 1),
                 ("Investigate", 0), ("Vehicle", 0), ("Computers", 0), ("Security", 0), ("Engineer", 0), ("Jack of all Trades", 0),
                 ("Mechanic", 0), ("Computers", 0), ("Admin", 0), ("Electronics", 0), ("Engineer", 0), ("Jack of all Trades", 0)),
-    #("Android", "Commercial Spacer"): (("Pilot", 0), ("Engineer", 0),
-    #                                   ("Navigation", 0), ("Gunner", 0), ("Computers", 0),
-    #                                   ("Comms", 0)),
-    #("Android", "Military Spacer"): (("Pilot", 0), ("Engineer", 0),
-    #                                 ("Navigation", 0), ("Gunner", 0), ("Computers", 0),
-    #                                ("Comms", 0)),
-    #("Android", "Survey Scout"): (("Pilot", 0), ("Engineer", 0),
-    #                              ("Navigation", 0), ("Comms", 0), ("Survival", 0),
-    #                              ("Drive", 0)),
-    #("Android", "Physician"): (("Medic", 0), ("Medic", 0),
-    #                           ("Investigate", 0), ("Electronics", 0), ("Computers", 0),
-    #                           ("Medic", 0)),
-    #("Android", "Scientist"): (("Investigate", 0), ("Computers", 0),
-    #                           ("Investigate", 0), ("Computers", 0), ("Admin", 0),
-    #                          ("Drive", 0)),
-    #("Android", "Technician"): (("Engineer", 0), ("Electronics", 0),
-    #                            ("Mechanic", 0), ("Comms", 0), ("Sensors", 0),
-    #                            ("Computers", 0)),
 }
 
 RANKS = {
@@ -878,13 +848,16 @@ RANKS = {
         (None, ("Melee (blade)", 1), ("Leadership", 1), None, ("Tactics (naval)", 1), ("Soc", 1), ("Soc", 1)),
     ("Navy Officer", "Flight"):
         (None, ("Melee (blade)", 2), ("Leadership", 1), None, ("Tactics (naval)", 1), ("Soc", 1), ("Soc", 1)),
-    ("Corporate Agent", "Intelligence"):
+}
+
+HOSTILE_RANKS = {
+    ("CorporateAgent", "Intelligence"):
         (None, None, None, None, None, None, None),
-    ("Corporate Executive", "ICO"):
+    ("CorporateExecutive", "ICO"):
         (None, ("Admin", 1), None, None, None, None, None),
     ("Colonist", "UCC"):
         (None, None, None, None, None, None, None),
-    ("Commercial Spacer", "Wanderer"):
+    ("CommercialSpacer", "Wanderer"):
         (None, None, None, None, ("Pilot", 1), None, None),
     ("Marine", "USMC"):
         (("Gun Combat", 1), None, None, None, None, None, None),
@@ -892,19 +865,21 @@ RANKS = {
         (None, None, None, None, None, None, None),
     ("Marshal", "Colonial Marshal"):
         (("Investigate", 1), None, None, None, None, None, None),
-    ("Military Spacer", "PMC"):
+    ("MilitarySpacer", "PMC"):
         (("Vacc Suit", 1), None, None, None, None, None, None),
-    ("Military Spacer Officer", "PMC"):
+    ("MilitarySpacer Officer", "PMC"):
         (None, None, None, None, None, ("Soc", 1), None),
     ("Physician", "Medical"):
         (("Medic", 1), ("Medic", 1), ("Medic", 1), None, None, None, None),
-    ("Ranger", "Action for Peace"):
+    ("Ranger", "APF"):
         (("Survival", 1), None, None, None, None, None, None),
-    ("HOS_Rogue", "Enforcer"):
+    ("Ranger Officer", "APF"):
+        (("Survival", 1), None, None, None, None, None, None),
+    ("Rogue", "Enforcer"):
         (("Streetwise", 1), ("Blade Combat", 1), None, None, None, None, None),
     ("Roughneck", "Freelance Miner"):
         (("Vacc Suit", 1), None, None, None, None, None, None),
-    ("Survey Scout", "MRA"):
+    ("SurveyScout", "MRA"):
         (None, ("Pilot", 1), None, None, None, None, None),
     ("Scientist", "ICO"):
         (("Investigate", 1), None, None, None, None, None, None),
@@ -1025,14 +1000,17 @@ BENEFITS = {
                ("", None),
                ("", None),
                ("", None)),
-    "Corporate Agent": (("Weapon", None),
+}
+
+HOSTILE_BENEFITS = {
+    "CorporateAgent": (("Weapon", None),
                         ("Standard Ticket", None),
                         ("Weapon", None),
                         ("Int", 1),
                         ("Edu", 1),
                         ("Soc", 1),
                         ("Soc", 1)),
-    "Military Spacer": ((("Distinguished Flying Cross", None), ("Soc", 1)),
+    "MilitarySpacer": ((("Distinguished Flying Cross", None), ("Soc", 1)),
                         ("Edu", 1),
                         ("Edu", 2),
                         ("Elite Ticket", None),
@@ -1046,7 +1024,7 @@ BENEFITS = {
                  ("Standard Ticket", None),
                  ("Elite Ticket", None),
                  ("Soc", 1)),
-    "Commercial Spacer": (("Standard Ticket", None),
+    "CommercialSpacer": (("Standard Ticket", None),
                           ("Edu", 1),
                           ("Weapon", None),
                           ("Elite Ticket", None),
@@ -1074,7 +1052,7 @@ BENEFITS = {
                    ("Edu", 1),
                    ("Dex", 1),
                    ("Edu", 2)),
-    "Corporate Executive": (("Elite Ticket", None),
+    "CorporateExecutive": (("Elite Ticket", None),
                             ("Edu", 1),
                             ("Int", 1),
                             ("Elite Ticket", None),
@@ -1088,7 +1066,7 @@ BENEFITS = {
                   ("Soc", 1),
                   ("Weapon", None),
                   ("Star Envoy Club Member", None)),
-    "HOS_Rogue": (("Standard Ticket", None),
+    "Rogue": (("Standard Ticket", None),
                   ("Soc", 1),
                   ("Weapon", None),
                   ("Weapon", None),
@@ -1102,7 +1080,7 @@ BENEFITS = {
                   ("Trauma Kit", None),
                   ("Elite Ticket", None),
                   ("Soc", 1)),
-    "Survey Scout": (("Standard Ticket", None),
+    "SurveyScout": (("Standard Ticket", None),
                      ("Int", 2),
                      ("Edu", 1),
                      ("Weapon", None),
@@ -1116,13 +1094,6 @@ BENEFITS = {
                   ("Edu", 1),
                   ("Int", 2),
                   ("Elite Ticket", None)),
-    #"Android": (("Gun", None),
-    #            ("5000", None),
-    #            ("1000", None),
-    #            ("Standard Ticket", None),
-    #            ("Standard Ticket", None),
-    #            ("1000", None),
-    #            ("5000", None)),
     "Ranger": (("Standard Ticket", None),
                ("Standard Ticket", None),
                ("Weapon", None),
@@ -1149,19 +1120,19 @@ CREDITS = {
     "Explorer": (20000, 20000, 30000, 30000, 50000, 50000, 50000),
     "Psion": (1000, 2000, 4000, 4000, 8000, 8000, 16000),
     "Warden": (1000, 2000, 5000, 7500, 10000, 25000, 50000),
-    "Corporate Agent": (500, 1000, 1000, 5000, 8000, 10000, 20000),
-    "Corporate Executive": (500, 1000, 1000, 5000, 8000, 10000, 20000),
+    "CorporateAgent": (500, 1000, 1000, 5000, 8000, 10000, 20000),
+    "CorporateExecutive": (500, 1000, 1000, 5000, 8000, 10000, 20000),
     "Colonist": (500, 1000, 1000, 5000, 8000, 10000, 20000),
-    "Commercial Spacer": (500, 1000, 1000, 5000, 8000, 10000, 20000),
+    "CommercialSpacer": (500, 1000, 1000, 5000, 8000, 10000, 20000),
     "Marine": (500, 1000, 1000, 5000, 8000, 10000, 20000),
     "Marshal": (500, 1000, 1000, 5000, 8000, 10000, 20000),
-    "Military Spacer": (500, 1000, 1000, 5000, 8000, 10000, 20000),
+    "MilitarySpacer": (500, 1000, 1000, 5000, 8000, 10000, 20000),
     "Physician": (500, 1000, 1000, 5000, 8000, 10000, 20000),
     "Ranger": (500, 1000, 1000, 5000, 8000, 10000, 20000),
-    "HOS_Rogue": (500, 1000, 1000, 5000, 8000, 10000, 20000),
+    "Rogue": (500, 1000, 1000, 5000, 8000, 10000, 20000),
     "Roughneck": (500, 1000, 1000, 5000, 8000, 10000, 20000),
     "Scientist": (500, 1000, 1000, 5000, 8000, 10000, 20000),
-    "Survey Scout": (500, 1000, 1000, 5000, 8000, 10000, 20000),
+    "SurveyScout": (500, 1000, 1000, 5000, 8000, 10000, 20000),
     "Technician": (500, 1000, 1000, 5000, 8000, 10000, 20000),
     #"Android": (5000, 1000, 'Standard Ticket', 'Standard Ticket', 8000, 1000, 5000),
 }
