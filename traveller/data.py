@@ -6,8 +6,6 @@ STARTING_AGE = 18
 
 STARTING_SKILLS = 3
 
-COMMISSION = 8
-
 FIELDS = ("T", "Career", "Spec", "Q", "S", "A",
           "Edu", "BT", "SR", "Rnk", "EM", "Age", "Ben")
 
@@ -15,118 +13,118 @@ TERM = {f: None for f in FIELDS}
 
 CAREERS = {
     'Agent': {
-        'Corporate': {'Surv': ('Int', 5), 'Qual': ('Int', 6), 'Adv': ('Int', 7)},
-        'Law Enforcement': {'Surv': ('End', 6), 'Qual': ('Int', 6), 'Adv': ('Int', 6)},
-        'Intelligence': {'Surv': ('Int', 7), 'Qual': ('Int', 6), 'Adv': ('Int', 5)}},
+        'Corporate': {'Surv': ('Int', 5), 'Qual': ('Int', 6), 'Adv': ('Int', 7), 'Com': ('Soc', 8)},
+        'Law Enforcement': {'Surv': ('End', 6), 'Qual': ('Int', 6), 'Adv': ('Int', 6), 'Com': ('Soc', 8)},
+        'Intelligence': {'Surv': ('Int', 7), 'Qual': ('Int', 6), 'Adv': ('Int', 5), 'Com': ('Soc', 8)}},
     'Merchant': {
-        'Free Trader': {'Surv': ('Dex', 6), 'Qual': ('Int', 4), 'Adv': ('Int', 6)},
-        'Merchant Marine': {'Surv': ('Edu', 5), 'Qual': ('Int', 4), 'Adv': ('Int', 7)},
-        'Broker': {'Surv': ('Edu', 5), 'Qual': ('Int', 4), 'Adv': ('Int', 7)}},
+        'Free Trader': {'Surv': ('Dex', 6), 'Qual': ('Int', 4), 'Adv': ('Int', 6), 'Com': ('Soc', 8)},
+        'Merchant Marine': {'Surv': ('Edu', 5), 'Qual': ('Int', 4), 'Adv': ('Int', 7), 'Com': ('Soc', 8)},
+        'Broker': {'Surv': ('Edu', 5), 'Qual': ('Int', 4), 'Adv': ('Int', 7)}, 'Com': ('Soc', 8)},
     'Scholar': {
-        'Physician': {'Surv': ('Edu', 4), 'Qual': ('Int', 6), 'Adv': ('Edu', 8)},
-        'Scientist': {'Surv': ('Edu', 4), 'Qual': ('Int', 6), 'Adv': ('Int', 8)},
-        'Field Researcher': {'Surv': ('End', 6), 'Qual': ('Int', 6), 'Adv': ('Int', 6)}},
+        'Physician': {'Surv': ('Edu', 4), 'Qual': ('Int', 6), 'Adv': ('Edu', 8), 'Com': ('Soc', 8)},
+        'Scientist': {'Surv': ('Edu', 4), 'Qual': ('Int', 6), 'Adv': ('Int', 8), 'Com': ('Soc', 8)},
+        'Field Researcher': {'Surv': ('End', 6), 'Qual': ('Int', 6), 'Adv': ('Int', 6), 'Com': ('Soc', 8)}},
     'Army': {
-        'Cavalry': {'Surv': ('Dex', 7), 'Qual': ('End', 5), 'Adv': ('Int', 5)},
-        'Support': {'Surv': ('End', 5), 'Qual': ('End', 5), 'Adv': ('Edu', 7)},
-        'Infantry': {'Surv': ('Str', 6), 'Qual': ('End', 5), 'Adv': ('Edu', 6)}},
+        'Cavalry': {'Surv': ('Dex', 7), 'Qual': ('End', 5), 'Adv': ('Int', 5), 'Com': ('Soc', 8)},
+        'Support': {'Surv': ('End', 5), 'Qual': ('End', 5), 'Adv': ('Edu', 7), 'Com': ('Soc', 8)},
+        'Infantry': {'Surv': ('Str', 6), 'Qual': ('End', 5), 'Adv': ('Edu', 6), 'Com': ('Soc', 8)}},
     'Navy': {
-        'Line/Crew': {'Surv': ('Int', 5), 'Qual': ('Int', 6), 'Adv': ('Edu', 7)},
-        'Flight': {'Surv': ('Dex', 7), 'Qual': ('Int', 6), 'Adv': ('Edu', 5)},
-        'Engineering/Gunnery': {'Surv': ('Int', 6), 'Qual': ('Int', 6), 'Adv': ('Edu', 6)}},
+        'Line/Crew': {'Surv': ('Int', 5), 'Qual': ('Int', 6), 'Adv': ('Edu', 7), 'Com': ('Soc', 8)},
+        'Flight': {'Surv': ('Dex', 7), 'Qual': ('Int', 6), 'Adv': ('Edu', 5), 'Com': ('Soc', 8)},
+        'Engineering/Gunnery': {'Surv': ('Int', 6), 'Qual': ('Int', 6), 'Adv': ('Edu', 6), 'Com': ('Soc', 8)}},
     'Marines': {
-        'Star Marines': {'Surv': ('End', 6), 'Qual': ('End', 6), 'Adv': ('Edu', 6)},
-        'Support': {'Surv': ('End', 5), 'Qual': ('End', 6), 'Adv': ('Edu', 7)},
-        'Ground Assault': {'Surv': ('End', 7), 'Qual': ('End', 6), 'Adv': ('Edu', 5)}},
+        'Star Marines': {'Surv': ('End', 6), 'Qual': ('End', 6), 'Adv': ('Edu', 6), 'Com': ('Soc', 8)},
+        'Support': {'Surv': ('End', 5), 'Qual': ('End', 6), 'Adv': ('Edu', 7), 'Com': ('Soc', 8)},
+        'Ground Assault': {'Surv': ('End', 7), 'Qual': ('End', 6), 'Adv': ('Edu', 5), 'Com': ('Soc', 8)}},
     'Army Officer': {
-        'Cavalry': {'Surv': ('Dex', 7), 'Qual': ('End', 5), 'Adv': ('Int', 5)},
-        'Support': {'Surv': ('End', 5), 'Qual': ('End', 5), 'Adv': ('Edu', 7)},
-        'Infantry': {'Surv': ('Str', 6), 'Qual': ('End', 5), 'Adv': ('Edu', 6)}},
+        'Cavalry': {'Surv': ('Dex', 7), 'Qual': ('End', 5), 'Adv': ('Int', 5), 'Com': ('Soc', 8)},
+        'Support': {'Surv': ('End', 5), 'Qual': ('End', 5), 'Adv': ('Edu', 7), 'Com': ('Soc', 8)},
+        'Infantry': {'Surv': ('Str', 6), 'Qual': ('End', 5), 'Adv': ('Edu', 6), 'Com': ('Soc', 8)}},
     'Navy Officer': {
-        'Line/Crew': {'Surv': ('Int', 5), 'Qual': ('Int', 6), 'Adv': ('Edu', 7)},
-        'Flight': {'Surv': ('Dex', 7), 'Qual': ('Int', 6), 'Adv': ('Edu', 5)},
-        'Engineering/Gunnery': {'Surv': ('Int', 6), 'Qual': ('Int', 6), 'Adv': ('Edu', 6)}},
+        'Line/Crew': {'Surv': ('Int', 5), 'Qual': ('Int', 6), 'Adv': ('Edu', 7), 'Com': ('Soc', 8)},
+        'Flight': {'Surv': ('Dex', 7), 'Qual': ('Int', 6), 'Adv': ('Edu', 5), 'Com': ('Soc', 8)},
+        'Engineering/Gunnery': {'Surv': ('Int', 6), 'Qual': ('Int', 6), 'Adv': ('Edu', 6), 'Com': ('Soc', 8)}},
     'Marines Officer': {
-        'Star Marines': {'Surv': ('End', 6), 'Qual': ('End', 6), 'Adv': ('Edu', 6)},
-        'Support': {'Surv': ('End', 5), 'Qual': ('End', 6), 'Adv': ('Edu', 7)},
-        'Ground Assault': {'Surv': ('End', 7), 'Qual': ('End', 6), 'Adv': ('Edu', 5)}},
+        'Star Marines': {'Surv': ('End', 6), 'Qual': ('End', 6), 'Adv': ('Edu', 6), 'Com': ('Soc', 8)},
+        'Support': {'Surv': ('End', 5), 'Qual': ('End', 6), 'Adv': ('Edu', 7), 'Com': ('Soc', 8)},
+        'Ground Assault': {'Surv': ('End', 7), 'Qual': ('End', 6), 'Adv': ('Edu', 5), 'Com': ('Soc', 8)}},
     'Scout': {
-        'Exploration': {'Surv': ('End', 7), 'Qual': ('Int', 5), 'Adv': ('Edu', 7)},
-        'Survey': {'Surv': ('End', 6), 'Qual': ('Int', 5), 'Adv': ('Int', 8)},
-        'Courier': {'Surv': ('End', 5), 'Qual': ('Int', 5), 'Adv': ('Edu', 9)}},
+        'Exploration': {'Surv': ('End', 7), 'Qual': ('Int', 5), 'Adv': ('Edu', 7), 'Com': ('Soc', 8)},
+        'Survey': {'Surv': ('End', 6), 'Qual': ('Int', 5), 'Adv': ('Int', 8), 'Com': ('Soc', 8)},
+        'Courier': {'Surv': ('End', 5), 'Qual': ('Int', 5), 'Adv': ('Edu', 9), 'Com': ('Soc', 8)}},
     'Drifter': {
-        'Scavenger': {'Surv': ('Dex', 7), 'Qual': ('End', None), 'Adv': ('End', 7)},
-        'Wanderer': {'Surv': ('End', 7), 'Qual': ('End', None), 'Adv': ('Int', 7)},
-        'Barbarian': {'Surv': ('End', 7), 'Qual': ('End', None), 'Adv': ('Str', 7)}},
+        'Scavenger': {'Surv': ('Dex', 7), 'Qual': ('End', None), 'Adv': ('End', 7), 'Com': ('Soc', 8)},
+        'Wanderer': {'Surv': ('End', 7), 'Qual': ('End', None), 'Adv': ('Int', 7), 'Com': ('Soc', 8)},
+        'Barbarian': {'Surv': ('End', 7), 'Qual': ('End', None), 'Adv': ('Str', 7), 'Com': ('Soc', 8)}},
     'Entertainer': {
-        'Performer': {'Surv': ('Int', 5), 'Qual': ('Int', 5), 'Adv': ('Dex', 7)},
-        'Journalist': {'Surv': ('Edu', 7), 'Qual': ('Int', 5), 'Adv': ('Int', 5)},
-        'Artist': {'Surv': ('Soc', 6), 'Qual': ('Int', 5), 'Adv': ('Int', 6)}},
+        'Performer': {'Surv': ('Int', 5), 'Qual': ('Int', 5), 'Adv': ('Dex', 7), 'Com': ('Soc', 8)},
+        'Journalist': {'Surv': ('Edu', 7), 'Qual': ('Int', 5), 'Adv': ('Int', 5), 'Com': ('Soc', 8)},
+        'Artist': {'Surv': ('Soc', 6), 'Qual': ('Int', 5), 'Adv': ('Int', 6), 'Com': ('Soc', 8)}},
     'Rogue': {
-        'Enforcer': {'Surv': ('End', 6), 'Qual': ('Dex', 6), 'Adv': ('Str', 6)},
-        'Thief': {'Surv': ('Int', 6), 'Qual': ('Dex', 6), 'Adv': ('Dex', 6)},
-        'Pirate': {'Surv': ('Dex', 6), 'Qual': ('Dex', 6), 'Adv': ('Int', 6)}},
+        'Enforcer': {'Surv': ('End', 6), 'Qual': ('Dex', 6), 'Adv': ('Str', 6), 'Com': ('Soc', 8)},
+        'Thief': {'Surv': ('Int', 6), 'Qual': ('Dex', 6), 'Adv': ('Dex', 6), 'Com': ('Soc', 8)},
+        'Pirate': {'Surv': ('Dex', 6), 'Qual': ('Dex', 6), 'Adv': ('Int', 6), 'Com': ('Soc', 8)}},
     'Citizen': {
-        'Worker': {'Surv': ('End', 4), 'Qual': ('Edu', 5), 'Adv': ('Edu', 8)},
-        'Colonist': {'Surv': ('Int', 7), 'Qual': ('Edu', 5), 'Adv': ('End', 5)},
-        'Corporate': {'Surv': ('Soc', 5), 'Qual': ('Edu', 5), 'Adv': ('Int', 6)}},
+        'Worker': {'Surv': ('End', 4), 'Qual': ('Edu', 5), 'Adv': ('Edu', 8), 'Com': ('Soc', 8)},
+        'Colonist': {'Surv': ('Int', 7), 'Qual': ('Edu', 5), 'Adv': ('End', 5), 'Com': ('Soc', 8)},
+        'Corporate': {'Surv': ('Soc', 5), 'Qual': ('Edu', 5), 'Adv': ('Int', 6), 'Com': ('Soc', 8)}},
     'Nobility': {
-        'Administrator': {'Surv': ('Int', 4), 'Qual': ('Soc', 10), 'Adv': ('Edu', 6)},
-        'Diplomat': {'Surv': ('Int', 5), 'Qual': ('Soc', 10), 'Adv': ('Soc', 7)},
-        'Dilettante': {'Surv': ('Soc', 3), 'Qual': ('Soc', 10), 'Adv': ('Int', 8)}},
+        'Administrator': {'Surv': ('Int', 4), 'Qual': ('Soc', 10), 'Adv': ('Edu', 6), 'Com': ('Soc', 8)},
+        'Diplomat': {'Surv': ('Int', 5), 'Qual': ('Soc', 10), 'Adv': ('Soc', 7), 'Com': ('Soc', 8)},
+        'Dilettante': {'Surv': ('Soc', 3), 'Qual': ('Soc', 10), 'Adv': ('Int', 8), 'Com': ('Soc', 8)}},
 }
 
 PSION = {
     'Psion': {
-        'Wild Talent': {'Surv': ('Soc', 6), 'Qual': ('Psi', 6), 'Adv': ('Int', 8)},
-        'Adept': {'Surv': ('Edu', 4), 'Qual': ('Psi', 6), 'Adv': ('Edu', 8)},
-        'Psi-Warrior': {'Surv': ('Edu', 6), 'Qual': ('Psi', 6), 'Adv': ('End', 6)}}
+        'Wild Talent': {'Surv': ('Soc', 6), 'Qual': ('Psi', 6), 'Adv': ('Int', 8), 'Com': ('Soc', 8)},
+        'Adept': {'Surv': ('Edu', 4), 'Qual': ('Psi', 6), 'Adv': ('Edu', 8), 'Com': ('Soc', 8)},
+        'Psi-Warrior': {'Surv': ('Edu', 6), 'Qual': ('Psi', 6), 'Adv': ('End', 6), 'Com': ('Soc', 8)}}
 }
 
 AGENT = {
     'Law Enforcement': {
-        'Patroller': {'Surv': ('Int', 7), 'Qual': ('Int', 5), 'Adv': ('Edu', 7)},
-        'Special Operations': {'Surv': ('End', 8), 'Qual': ('Int', 5), 'Adv': ('Int', 6)},
-        'Customs': {'Surv': ('Dex', 6), 'Qual': ('Int', 5), 'Adv': ('Edu', 8)}},
+        'Patroller': {'Surv': ('Int', 7), 'Qual': ('Int', 5), 'Adv': ('Edu', 7), 'Com': ('Soc', 8)},
+        'Special Operations': {'Surv': ('End', 8), 'Qual': ('Int', 5), 'Adv': ('Int', 6), 'Com': ('Soc', 8)},
+        'Customs': {'Surv': ('Dex', 6), 'Qual': ('Int', 5), 'Adv': ('Edu', 8), 'Com': ('Soc', 8)}},
     'Investigator': {
-        'Private Detective': {'Surv': ('Int', 6), 'Qual': ('Int', 6), 'Adv': ('Soc', 8)},
-        'Inspector': {'Surv': ('Edu', 7), 'Qual': ('Int', 6), 'Adv': ('Int', 7)},
-        'Undercover Agent': {'Surv': ('Int', 8), 'Qual': ('Int', 6), 'Adv': ('Edu', 6)}},
+        'Private Detective': {'Surv': ('Int', 6), 'Qual': ('Int', 6), 'Adv': ('Soc', 8), 'Com': ('Soc', 8)},
+        'Inspector': {'Surv': ('Edu', 7), 'Qual': ('Int', 6), 'Adv': ('Int', 7), 'Com': ('Soc', 8)},
+        'Undercover Agent': {'Surv': ('Int', 8), 'Qual': ('Int', 6), 'Adv': ('Edu', 6), 'Com': ('Soc', 8)}},
     'Spy': {
-        'Field Agent': {'Surv': ('Edu', 6), 'Qual': ('Int', 7), 'Adv': ('Soc', 8)},
-        'Operative': {'Surv': ('Edu', 7), 'Qual': ('Int', 7), 'Adv': ('Int', 7)},
-        'Infiltrator': {'Surv': ('Edu', 8), 'Qual': ('Int', 7), 'Adv': ('Int', 6)}},
+        'Field Agent': {'Surv': ('Edu', 6), 'Qual': ('Int', 7), 'Adv': ('Soc', 8), 'Com': ('Soc', 8)},
+        'Operative': {'Surv': ('Edu', 7), 'Qual': ('Int', 7), 'Adv': ('Int', 7), 'Com': ('Soc', 8)},
+        'Infiltrator': {'Surv': ('Edu', 8), 'Qual': ('Int', 7), 'Adv': ('Int', 6), 'Com': ('Soc', 8)}},
     'Analyst': {
-        'Political Officer': {'Surv': ('Soc', 6), 'Qual': ('Soc', 8), 'Adv': ('Soc', 7)},
-        'Technical Expert': {'Surv': ('Int', 7), 'Qual': ('Soc', 8), 'Adv': ('Int', 6)},
-        'Handler': {'Surv': ('Int', 7), 'Qual': ('Soc', 8), 'Adv': ('Soc', 7)}},
+        'Political Officer': {'Surv': ('Soc', 6), 'Qual': ('Soc', 8), 'Adv': ('Soc', 7), 'Com': ('Soc', 8)},
+        'Technical Expert': {'Surv': ('Int', 7), 'Qual': ('Soc', 8), 'Adv': ('Int', 6), 'Com': ('Soc', 8)},
+        'Handler': {'Surv': ('Int', 7), 'Qual': ('Soc', 8), 'Adv': ('Soc', 7), 'Com': ('Soc', 8)}},
     'Corporate': {
-        'Security': {'Surv': ('Int', 5), 'Qual': ('Int', 6), 'Adv': ('Int', 7)},
-        'Espionage': {'Surv': ('Dex', 7), 'Qual': ('Int', 6), 'Adv': ('Int', 6)},
-        'Bodyguard': {'Surv': ('End', 7), 'Qual': ('Int', 6), 'Adv': ('Soc', 6)}},
+        'Security': {'Surv': ('Int', 5), 'Qual': ('Int', 6), 'Adv': ('Int', 7), 'Com': ('Soc', 8)},
+        'Espionage': {'Surv': ('Dex', 7), 'Qual': ('Int', 6), 'Adv': ('Int', 6), 'Com': ('Soc', 8)},
+        'Bodyguard': {'Surv': ('End', 7), 'Qual': ('Int', 6), 'Adv': ('Soc', 6), 'Com': ('Soc', 8)}},
     'Bounty Hunter': {
-        'Ship Tracer': {'Surv': ('End', 6), 'Qual': ('Int', 7), 'Adv': ('Soc', 7)},
-        'Bondsman': {'Surv': ('End', 7), 'Qual': ('Int', 7), 'Adv': ('Int', 7)},
-        'Thieftaker': {'Surv': ('Dex', 7), 'Qual': ('Int', 7), 'Adv': ('Int', 6)}}
+        'Ship Tracer': {'Surv': ('End', 6), 'Qual': ('Int', 7), 'Adv': ('Soc', 7), 'Com': ('Soc', 8)},
+        'Bondsman': {'Surv': ('End', 7), 'Qual': ('Int', 7), 'Adv': ('Int', 7), 'Com': ('Soc', 8)},
+        'Thieftaker': {'Surv': ('Dex', 7), 'Qual': ('Int', 7), 'Adv': ('Int', 6), 'Com': ('Soc', 8)}}
 }
 
 CHTHONIAN_STARS = {
     'Explorer': {
-        'Exploration': {'Surv': ('End', 7), 'Qual': ('Int', 5), 'Adv': ('Edu', 7)},
-        'Survey': {'Surv': ('End', 6), 'Qual': ('Int', 5), 'Adv': ('Int', 8)}},
+        'Exploration': {'Surv': ('End', 7), 'Qual': ('Int', 5), 'Adv': ('Edu', 7), 'Com': ('Soc', 8)},
+        'Survey': {'Surv': ('End', 6), 'Qual': ('Int', 5), 'Adv': ('Int', 8), 'Com': ('Soc', 8)}},
     'Scholar': {
-        'Physician': {'Surv': ('Edu', 4), 'Qual': ('Int', 6), 'Adv': ('Edu', 8)},
-        'Scientist': {'Surv': ('Edu', 4), 'Qual': ('Int', 6), 'Adv': ('Int', 8)},
-        'Field Researcher': {'Surv': ('End', 6), 'Qual': ('Int', 6), 'Adv': ('Int', 6)},
-        'Occultist': {'Surv': ('Int', 6), 'Qual': ('Int', 6), 'Adv': ('Edu', 6)}},
+        'Physician': {'Surv': ('Edu', 4), 'Qual': ('Int', 6), 'Adv': ('Edu', 8), 'Com': ('Soc', 8)},
+        'Scientist': {'Surv': ('Edu', 4), 'Qual': ('Int', 6), 'Adv': ('Int', 8), 'Com': ('Soc', 8)},
+        'Field Researcher': {'Surv': ('End', 6), 'Qual': ('Int', 6), 'Adv': ('Int', 6), 'Com': ('Soc', 8)},
+        'Occultist': {'Surv': ('Int', 6), 'Qual': ('Int', 6), 'Adv': ('Edu', 6), 'Com': ('Soc', 8)}},
     'Warden': {
-        'Researcher': {'Surv': ('Int', 7), 'Qual': ('Int', 6), 'Adv': ('Int', 5)},
-        'Enforcer': {'Surv': ('End', 6), 'Qual': ('Int', 6), 'Adv': ('Int', 5)},
-        'Investigator': {'Surv': ('Int', 7), 'Qual': ('Int', 6), 'Adv': ('Int', 6)}},
+        'Researcher': {'Surv': ('Int', 7), 'Qual': ('Int', 6), 'Adv': ('Int', 5), 'Com': ('Soc', 8)},
+        'Enforcer': {'Surv': ('End', 6), 'Qual': ('Int', 6), 'Adv': ('Int', 5), 'Com': ('Soc', 8)},
+        'Investigator': {'Surv': ('Int', 7), 'Qual': ('Int', 6), 'Adv': ('Int', 6), 'Com': ('Soc', 8)}},
     'Aristocrat': {
-        'Administrator': {'Surv': ('Int', 4), 'Qual': ('Soc', 10), 'Adv': ('Edu', 6)},
-        'Diplomat': {'Surv': ('Int', 5), 'Qual': ('Soc', 10), 'Adv': ('Soc', 7)},
-        'Dilettante': {'Surv': ('Soc', 3), 'Qual': ('Soc', 10), 'Adv': ('Int', 8)}},
+        'Administrator': {'Surv': ('Int', 4), 'Qual': ('Soc', 10), 'Adv': ('Edu', 6), 'Com': ('Soc', 8)},
+        'Diplomat': {'Surv': ('Int', 5), 'Qual': ('Soc', 10), 'Adv': ('Soc', 7), 'Com': ('Soc', 8)},
+        'Dilettante': {'Surv': ('Soc', 3), 'Qual': ('Soc', 10), 'Adv': ('Int', 8), 'Com': ('Soc', 8)}},
 }
 
 SCOUNDREL = {
@@ -135,64 +133,64 @@ SCOUNDREL = {
     #       '': {'Surv': ('', ), 'Qual': ('', ), 'Adv': ('', )},
     #       '': {'Surv': ('', ), 'Qual': ('', ), 'Adv': ('', )}},
     'Intruder': {
-        'Hacker': {'Surv': ('Edu', 6), 'Qual': ('Int', 7), 'Adv': ('Int', 8)},
-        'Burglar': {'Surv': ('End', 7), 'Qual': ('Int', 7), 'Adv': ('Dex', 7)},
-        'Faceman': {'Surv': ('Edu', 8), 'Qual': ('Int', 7), 'Adv': ('Soc', 6)}},
+        'Hacker': {'Surv': ('Edu', 6), 'Qual': ('Int', 7), 'Adv': ('Int', 8), 'Com': ('Soc', 8)},
+        'Burglar': {'Surv': ('End', 7), 'Qual': ('Int', 7), 'Adv': ('Dex', 7), 'Com': ('Soc', 8)},
+        'Faceman': {'Surv': ('Edu', 8), 'Qual': ('Int', 7), 'Adv': ('Soc', 6), 'Com': ('Soc', 8)}},
     'Smuggler': {
-        'Blockade Runner': {'Surv': ('Dex', 6), 'Qual': ('Edu', 6), 'Adv': ('Edu', 8)},
-        'Bootlegger': {'Surv': ('End', 7), 'Qual': ('Edu', 6), 'Adv': ('Int', 7)},
-        'Crew': {'Surv': ('Int', 6), 'Qual': ('Edu', 6), 'Adv': ('Edu', 8)}},
+        'Blockade Runner': {'Surv': ('Dex', 6), 'Qual': ('Edu', 6), 'Adv': ('Edu', 8), 'Com': ('Soc', 8)},
+        'Bootlegger': {'Surv': ('End', 7), 'Qual': ('Edu', 6), 'Adv': ('Int', 7), 'Com': ('Soc', 8)},
+        'Crew': {'Surv': ('Int', 6), 'Qual': ('Edu', 6), 'Adv': ('Edu', 8), 'Com': ('Soc', 8)}},
     'Organized Criminal': {
-        'Assassin': {'Surv': ('End', 7), 'Qual': ('End', 8), 'Adv': ('Dex', 7)},
-        'Enforcer': {'Surv': ('End', 8), 'Qual': ('End', 8), 'Adv': ('Str', 6)},
-        'Co-ordinator': {'Surv': ('Edu', 6), 'Qual': ('End', 8), 'Adv': ('Int', 8)}},
+        'Assassin': {'Surv': ('End', 7), 'Qual': ('End', 8), 'Adv': ('Dex', 7), 'Com': ('Soc', 8)},
+        'Enforcer': {'Surv': ('End', 8), 'Qual': ('End', 8), 'Adv': ('Str', 6), 'Com': ('Soc', 8)},
+        'Co-ordinator': {'Surv': ('Edu', 6), 'Qual': ('End', 8), 'Adv': ('Int', 8), 'Com': ('Soc', 8)}},
     'Pirate': {
-        'Corsair': {'Surv': ('Int', 7), 'Qual': ('Int', 7), 'Adv': ('Edu', 7)},
-        'Boarder': {'Surv': ('End', 8), 'Qual': ('Int', 7), 'Adv': ('Int', 6)},
-        'Jumpcusser': {'Surv': ('Dex', 6), 'Qual': ('Int', 7), 'Adv': ('Int', 8)}},
+        'Corsair': {'Surv': ('Int', 7), 'Qual': ('Int', 7), 'Adv': ('Edu', 7), 'Com': ('Soc', 8)},
+        'Boarder': {'Surv': ('End', 8), 'Qual': ('Int', 7), 'Adv': ('Int', 6), 'Com': ('Soc', 8)},
+        'Jumpcusser': {'Surv': ('Dex', 6), 'Qual': ('Int', 7), 'Adv': ('Int', 8), 'Com': ('Soc', 8)}},
     'Scavenger': {
-        'Wrecker': {'Surv': ('End', 7), 'Qual': ('Int', None), 'Adv': ('Edu', 7)},
-        'Salvage Expert': {'Surv': ('Edu', 7), 'Qual': ('Int', None), 'Adv': ('Int', 7)},
-        'Tomb Robber': {'Surv': ('End', 7), 'Qual': ('Int', None), 'Adv': ('Dex', 7)}},
+        'Wrecker': {'Surv': ('End', 7), 'Qual': ('Int', None), 'Adv': ('Edu', 7), 'Com': ('Soc', 8)},
+        'Salvage Expert': {'Surv': ('Edu', 7), 'Qual': ('Int', None), 'Adv': ('Int', 7), 'Com': ('Soc', 8)},
+        'Tomb Robber': {'Surv': ('End', 7), 'Qual': ('Int', None), 'Adv': ('Dex', 7), 'Com': ('Soc', 8)}},
     'Wanderer': {
-        'Hitchhiker': {'Surv': ('Soc', 7), 'Qual': ('Int', None), 'Adv': ('Edu', 7)},
-        'Vagabond': {'Surv': ('End', 7), 'Qual': ('Int', None), 'Adv': ('Int', 7)},
-        'Bandit': {'Surv': ('End', 7), 'Qual': ('Int', None), 'Adv': ('Str', 7)}},
+        'Hitchhiker': {'Surv': ('Soc', 7), 'Qual': ('Int', None), 'Adv': ('Edu', 7), 'Com': ('Soc', 8)},
+        'Vagabond': {'Surv': ('End', 7), 'Qual': ('Int', None), 'Adv': ('Int', 7), 'Com': ('Soc', 8)},
+        'Bandit': {'Surv': ('End', 7), 'Qual': ('Int', None), 'Adv': ('Str', 7), 'Com': ('Soc', 8)}},
     'Barbarian': {
-        'Warrior': {'Surv': ('End', 8), 'Qual': ('End', 7), 'Adv': ('Str', 6)},
-        'Tribesman': {'Surv': ('End', 6), 'Qual': ('End', 7), 'Adv': ('Int', 8)},
-        'Shaman': {'Surv': ('Int', 7), 'Qual': ('End', 7), 'Adv': ('Soc', 7)}},
+        'Warrior': {'Surv': ('End', 8), 'Qual': ('End', 7), 'Adv': ('Str', 6), 'Com': ('Soc', 8)},
+        'Tribesman': {'Surv': ('End', 6), 'Qual': ('End', 7), 'Adv': ('Int', 8), 'Com': ('Soc', 8)},
+        'Shaman': {'Surv': ('Int', 7), 'Qual': ('End', 7), 'Adv': ('Soc', 7), 'Com': ('Soc', 8)}},
 }
 
 DILETTANTE = {
     'Adventurer': {
-        'Explorer': {'Surv': ('Int', 6), 'Qual': ('End', 6), 'Adv': ('End', 6)},
-        'Hunter': {'Surv': ('End', 7), 'Qual': ('End', 6), 'Adv': ('Dex', 5)},
-        'Archaeologist': {'Surv': ('Edu', 5), 'Qual': ('End', 6), 'Adv': ('Int', 7)}},
+        'Explorer': {'Surv': ('Int', 6), 'Qual': ('End', 6), 'Adv': ('End', 6), 'Com': ('Soc', 8)},
+        'Hunter': {'Surv': ('End', 7), 'Qual': ('End', 6), 'Adv': ('Dex', 5), 'Com': ('Soc', 8)},
+        'Archaeologist': {'Surv': ('Edu', 5), 'Qual': ('End', 6), 'Adv': ('Int', 7), 'Com': ('Soc', 8)}},
     'Aristocrat': {
-        'Courtier': {'Surv': ('Int', 7), 'Qual': ('Soc', 6), 'Adv': ('Soc', 5)},
-        'Chevalier': {'Surv': ('Dex', 6), 'Qual': ('Soc', 6), 'Adv': ('Soc', 6)},
-        'Paramour': {'Surv': ('Soc', 5), 'Qual': ('Soc', 6), 'Adv': ('End', 7)}},
+        'Courtier': {'Surv': ('Int', 7), 'Qual': ('Soc', 6), 'Adv': ('Soc', 5), 'Com': ('Soc', 8)},
+        'Chevalier': {'Surv': ('Dex', 6), 'Qual': ('Soc', 6), 'Adv': ('Soc', 6), 'Com': ('Soc', 8)},
+        'Paramour': {'Surv': ('Soc', 5), 'Qual': ('Soc', 6), 'Adv': ('End', 7), 'Com': ('Soc', 8)}},
     'Celebrity': {
-        'Actor': {'Surv': ('Soc', 6), 'Qual': ('Soc', 7), 'Adv': ('Int', 6)},
-        'Musician': {'Surv': ('Dex', 5), 'Qual': ('Soc', 7), 'Adv': ('Soc', 7)},
-        'Luminary': {'Surv': ('Int', 7), 'Qual': ('Soc', 7), 'Adv': ('Edu', 5)}},
+        'Actor': {'Surv': ('Soc', 6), 'Qual': ('Soc', 7), 'Adv': ('Int', 6), 'Com': ('Soc', 8)},
+        'Musician': {'Surv': ('Dex', 5), 'Qual': ('Soc', 7), 'Adv': ('Soc', 7), 'Com': ('Soc', 8)},
+        'Luminary': {'Surv': ('Int', 7), 'Qual': ('Soc', 7), 'Adv': ('Edu', 5), 'Com': ('Soc', 8)}},
     'Competitor': {
-        'Sportsman': {'Surv': ('End', 6), 'Qual': ('Int', 6), 'Adv': ('Str', 6)},
-        'Athlete': {'Surv': ('Dex', 6), 'Qual': ('Str', 6), 'Adv': ('End', 6)},
-        'Gamer': {'Surv': ('Int', 6), 'Qual': ('Int', 6), 'Adv': ('Edu', 6)}},
+        'Sportsman': {'Surv': ('End', 6), 'Qual': ('Int', 6), 'Adv': ('Str', 6), 'Com': ('Soc', 8)},
+        'Athlete': {'Surv': ('Dex', 6), 'Qual': ('Str', 6), 'Adv': ('End', 6), 'Com': ('Soc', 8)},
+        'Gamer': {'Surv': ('Int', 6), 'Qual': ('Int', 6), 'Adv': ('Edu', 6), 'Com': ('Soc', 8)}},
     'Connoisseur': {
-        'Critic': {'Surv': ('Int', 7), 'Qual': ('Edu', 7), 'Adv': ('Edu', 5)},
-        'Artisan': {'Surv': ('Dex', 5), 'Qual': ('Edu', 7), 'Adv': ('Soc', 7)},
-        'Collector': {'Surv': ('Edu', 6), 'Qual': ('Edu', 7), 'Adv': ('Int', 6)}},
+        'Critic': {'Surv': ('Int', 7), 'Qual': ('Edu', 7), 'Adv': ('Edu', 5), 'Com': ('Soc', 8)},
+        'Artisan': {'Surv': ('Dex', 5), 'Qual': ('Edu', 7), 'Adv': ('Soc', 7), 'Com': ('Soc', 8)},
+        'Collector': {'Surv': ('Edu', 6), 'Qual': ('Edu', 7), 'Adv': ('Int', 6), 'Com': ('Soc', 8)}},
     'Dilettante': {
-        'Wastrel': {'Surv': ('End', 5), 'Qual': ('Soc', 7), 'Adv': ('Int', 7)},
-        'Socialite': {'Surv': ('Soc', 7), 'Qual': ('Soc', 7), 'Adv': ('End', 5)},
-        'Philanthropist': {'Surv': ('Int', 6), 'Qual': ('Soc', 7), 'Adv': ('Soc', 6)}},
+        'Wastrel': {'Surv': ('End', 5), 'Qual': ('Soc', 7), 'Adv': ('Int', 7), 'Com': ('Soc', 8)},
+        'Socialite': {'Surv': ('Soc', 7), 'Qual': ('Soc', 7), 'Adv': ('End', 5), 'Com': ('Soc', 8)},
+        'Philanthropist': {'Surv': ('Int', 6), 'Qual': ('Soc', 7), 'Adv': ('Soc', 6), 'Com': ('Soc', 8)}},
     'Humanitarian': {
-        'Idealist': {'Surv': ('Soc', 5), 'Qual': ('Int', 6), 'Adv': ('Int', 7)},
-        'Raconteur': {'Surv': ('Edu', 6), 'Qual': ('Int', 6), 'Adv': ('Soc', 6)},
-        'Investigator': {'Surv': ('Int', 7), 'Qual': ('Int', 6), 'Adv': ('Edu', 5)}},
+        'Idealist': {'Surv': ('Soc', 5), 'Qual': ('Int', 6), 'Adv': ('Int', 7), 'Com': ('Soc', 8)},
+        'Raconteur': {'Surv': ('Edu', 6), 'Qual': ('Int', 6), 'Adv': ('Soc', 6), 'Com': ('Soc', 8)},
+        'Investigator': {'Surv': ('Int', 7), 'Qual': ('Int', 6), 'Adv': ('Edu', 5), 'Com': ('Soc', 8)}},
 }
 
 HOSTILE = {
