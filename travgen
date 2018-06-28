@@ -86,13 +86,14 @@ from traveller.data import (CAREERS, FALLBACK_CAREERS, SKILLS,
                             SCOUNDREL, PSION, HOSTILE, DRAFT,
                             WORLDS, HOSTILE_WORLDS, EDU_SKILLS,
                             HOSTILE_EDU_SKILLS, HOSTILE_BENEFITS, HOSTILE_RANKS,
-                            HOSTILE_SKILLS, BENEFITS, RANKS)
+                            HOSTILE_SKILLS, BENEFITS, RANKS,
+                            CREDITS, HOSTILE_CREDITS)
 
 
 #EXPANSIONS = ["Chthonian Stars", "Agent", "Scoundrel", "Dilettante", "Hostile"]
 #EXPANSIONS = ["Chthonian Stars"]
 EXPANSIONS = ["Hostile"]
-
+#EXPANSIONS = []
 
 def set_expansions(E):
     global CAREERS
@@ -126,6 +127,7 @@ def set_expansions(E):
             SKILLS.clear()
             RANKS.clear()
             BENEFITS.clear()
+            CREDITS.clear()
             del EDU_SKILLS[:]
             del FALLBACK_CAREERS[:]
             del DRAFT[:]
@@ -134,6 +136,7 @@ def set_expansions(E):
             SKILLS.update(HOSTILE_SKILLS)
             RANKS.update(HOSTILE_RANKS)
             BENEFITS.update(HOSTILE_BENEFITS)
+            CREDITS.update(HOSTILE_CREDITS)
             EDU_SKILLS = HOSTILE_EDU_SKILLS
             FALLBACK_CAREERS.extend(("Roughneck", "Ranger", "Colonist"))
             DRAFT.extend(("Ranger"))
