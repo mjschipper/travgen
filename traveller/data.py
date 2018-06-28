@@ -6,7 +6,7 @@ STARTING_AGE = 18
 
 STARTING_SKILLS = 3
 
-FIELDS = ("T", "Career", "Spec", "Q", "S", "A",
+FIELDS = ("T", "Career", "Spec", "Q", "S", "A", "C",
           "Edu", "BT", "SR", "Rnk", "EM", "Age", "Ben")
 
 TERM = {f: None for f in FIELDS}
