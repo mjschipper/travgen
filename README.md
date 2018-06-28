@@ -73,6 +73,7 @@ The `--show-hist` option returns a narrative description of the steps taken duri
 * Q = Qualified/enlisted successfully?
 * S = Survived?
 * A = Advanced?
+* C = Commissioned?
 * Edu = Number of starting skills based on homeworld.
 * BT = Number of basic training skills.
 * SR = Number of skill rolls for the term.

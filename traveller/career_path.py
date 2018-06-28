@@ -7,7 +7,7 @@ from data import *
 
 STARTING_SKILLS = 3
 COMMISSION = 8
-FIELDS = ('T', 'Career', 'Spec', 'Q', 'S', 'A', 'Com', 'Edu', 'BT', 'SR', 'Rnk', 'EM', 'Age', 'Ben')
+FIELDS = ('T', 'Career', 'Spec', 'Q', 'S', 'A', 'C', 'Edu', 'BT', 'SR', 'Rnk', 'EM', 'Age', 'Ben')
 TERM = {f: None for f in FIELDS}
 
 
@@ -164,9 +164,11 @@ class CareerPath(object):
               self.terms[n]['Career'] = career + ' Officer'
               self.history += [' Received a Commission.']
               self.terms[n]['A'] = True
+              self.terms[n]['C'] = True
             else:
               self.history += [' Failed to receive a Commission.']
               self.terms[n]['A'] = True
+              self.terms[n]['C'] = True
 
     def advance(self, n, career_table):
         adv, adv_roll = self.stat_check(career_table, 'Adv', roll=True)
