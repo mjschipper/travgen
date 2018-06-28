@@ -7,7 +7,7 @@ from data import *
 
 STARTING_SKILLS = 3
 COMMISSION = 8
-FIELDS = ('T', 'Career', 'Spec', 'Q', 'S', 'A', 'Edu', 'BT', 'SR', 'Rnk', 'EM', 'Age', 'Ben')
+FIELDS = ('T', 'Career', 'Spec', 'Q', 'S', 'A', 'Com', 'Edu', 'BT', 'SR', 'Rnk', 'EM', 'Age', 'Ben')
 TERM = {f: None for f in FIELDS}
 
 
@@ -157,14 +157,16 @@ class CareerPath(object):
             self.history += [' Experienced an Event (Roll=%d,%d).' % r]
 
     def get_commission(self, n, career):
-        comm = self.stats.Soc.roll() >= COMMISSION
-        if comm:
-            self.terms[n]['Career'] = career + ' Officer'
-            self.history += [' Received a Commission.']
-            self.terms[n]['A'] = True
-        else:
-            self.history += [' Failed to receive a Commission.']
-            self.terms[n]['A'] = True
+        #if career + ' Officer' in CAREERS:
+            #adv, adv_roll = self.stat_check(career_table, 'Com', roll=True)
+            comm = self.stats.Soc.roll() >= COMMISSION
+            if comm:
+              self.terms[n]['Career'] = career + ' Officer'
+              self.history += [' Received a Commission.']
+              self.terms[n]['A'] = True
+            else:
+              self.history += [' Failed to receive a Commission.']
+              self.terms[n]['A'] = True
 
     def advance(self, n, career_table):
         adv, adv_roll = self.stat_check(career_table, 'Adv', roll=True)
