@@ -19,7 +19,7 @@ CAREERS = {
     'Merchant': {
         'Free Trader': {'Surv': ('Dex', 6), 'Qual': ('Int', 4), 'Adv': ('Int', 6), 'Com': ('Soc', 8)},
         'Merchant Marine': {'Surv': ('Edu', 5), 'Qual': ('Int', 4), 'Adv': ('Int', 7), 'Com': ('Soc', 8)},
-        'Broker': {'Surv': ('Edu', 5), 'Qual': ('Int', 4), 'Adv': ('Int', 7)}, 'Com': ('Soc', 8)},
+        'Broker': {'Surv': ('Edu', 5), 'Qual': ('Int', 4), 'Adv': ('Int', 7), 'Com': ('Soc', 8)}},
     'Scholar': {
         'Physician': {'Surv': ('Edu', 4), 'Qual': ('Int', 6), 'Adv': ('Edu', 8), 'Com': ('Soc', 8)},
         'Scientist': {'Surv': ('Edu', 4), 'Qual': ('Int', 6), 'Adv': ('Int', 8), 'Com': ('Soc', 8)},
@@ -71,7 +71,7 @@ CAREERS = {
     'Nobility': {
         'Administrator': {'Surv': ('Int', 4), 'Qual': ('Soc', 10), 'Adv': ('Edu', 6), 'Com': ('Soc', 8)},
         'Diplomat': {'Surv': ('Int', 5), 'Qual': ('Soc', 10), 'Adv': ('Soc', 7), 'Com': ('Soc', 8)},
-        'Dilettante': {'Surv': ('Soc', 3), 'Qual': ('Soc', 10), 'Adv': ('Int', 8), 'Com': ('Soc', 8)}},
+        'Dilettante': {'Surv': ('Soc', 3), 'Qual': ('Soc', 10), 'Adv': ('Int', 8), 'Com': ('Soc', 8)}}
 }
 
 PSION = {
@@ -124,7 +124,7 @@ CHTHONIAN_STARS = {
     'Aristocrat': {
         'Administrator': {'Surv': ('Int', 4), 'Qual': ('Soc', 10), 'Adv': ('Edu', 6), 'Com': ('Soc', 8)},
         'Diplomat': {'Surv': ('Int', 5), 'Qual': ('Soc', 10), 'Adv': ('Soc', 7), 'Com': ('Soc', 8)},
-        'Dilettante': {'Surv': ('Soc', 3), 'Qual': ('Soc', 10), 'Adv': ('Int', 8), 'Com': ('Soc', 8)}},
+        'Dilettante': {'Surv': ('Soc', 3), 'Qual': ('Soc', 10), 'Adv': ('Int', 8), 'Com': ('Soc', 8)}}
 }
 
 SCOUNDREL = {
@@ -159,7 +159,7 @@ SCOUNDREL = {
     'Barbarian': {
         'Warrior': {'Surv': ('End', 8), 'Qual': ('End', 7), 'Adv': ('Str', 6), 'Com': ('Soc', 8)},
         'Tribesman': {'Surv': ('End', 6), 'Qual': ('End', 7), 'Adv': ('Int', 8), 'Com': ('Soc', 8)},
-        'Shaman': {'Surv': ('Int', 7), 'Qual': ('End', 7), 'Adv': ('Soc', 7), 'Com': ('Soc', 8)}},
+        'Shaman': {'Surv': ('Int', 7), 'Qual': ('End', 7), 'Adv': ('Soc', 7), 'Com': ('Soc', 8)}}
 }
 
 DILETTANTE = {
@@ -190,7 +190,7 @@ DILETTANTE = {
     'Humanitarian': {
         'Idealist': {'Surv': ('Soc', 5), 'Qual': ('Int', 6), 'Adv': ('Int', 7), 'Com': ('Soc', 8)},
         'Raconteur': {'Surv': ('Edu', 6), 'Qual': ('Int', 6), 'Adv': ('Soc', 6), 'Com': ('Soc', 8)},
-        'Investigator': {'Surv': ('Int', 7), 'Qual': ('Int', 6), 'Adv': ('Edu', 5), 'Com': ('Soc', 8)}},
+        'Investigator': {'Surv': ('Int', 7), 'Qual': ('Int', 6), 'Adv': ('Edu', 5), 'Com': ('Soc', 8)}}
 }
 
 HOSTILE = {
@@ -229,7 +229,7 @@ HOSTILE = {
     'Drifter': {
         'Scavenger': {'Surv': ('Dex', 7), 'Qual': ('End', None), 'Adv': ('End', 7), 'Com': ('Soc', 8)},
         'Wanderer': {'Surv': ('End', 7), 'Qual': ('End', None), 'Adv': ('Int', 7), 'Com': ('Soc', 8)},
-        'Barbarian': {'Surv': ('End', 7), 'Qual': ('End', None), 'Adv': ('Str', 7), 'Com': ('Soc', 8)}},
+        'Barbarian': {'Surv': ('End', 7), 'Qual': ('End', None), 'Adv': ('Str', 7), 'Com': ('Soc', 8)}}
 }
 
 DRAFT = ["Army", "Navy", "Marines"]
@@ -675,7 +675,7 @@ SKILLS = {
                                ("Teleportation", 0), ("Any Skill", 0), ("Telepathy", 0), ("Awareness", 0),
                                ("Teleportation", 0), ("Gun Combat", 0), ("Battle Dress", 0), ("Recon", 0),
                                ("Comms", 0), ("Computers", 0), ("Language", 0), ("Medic", 0),
-                               ("Life Science", 0), ("Space Science", 0)),
+                               ("Life Science", 0), ("Space Science", 0))
 }
 
 HOSTILE_SKILLS = {
@@ -780,7 +780,7 @@ HOSTILE_SKILLS = {
         ("Animals", 0), ("Carouse", 0), ("Brawling", 0), ("Stealth", 0), ("Seafarer", 0), ("Survival", 0),
         ("Str", 1), ("End", 1), ("Dex", 1), ("Jack of all Trades", 0), ("End", 1), ("Int", 1),
         ("Athletics", 0), ("Brawling", 0), ("Recon", 0), ("Streetwise", 0), ("Stealth", 0), ("Survival", 0),
-        ("Animals", 0), ("Carouse", 0), ("Melee (blade)", 0), ("Stealth", 0), ("Seafarer", 0), ("Survival", 0)),
+        ("Animals", 0), ("Carouse", 0), ("Blade Combat", 0), ("Stealth", 0), ("Seafarer", 0), ("Survival", 0)),
     ("Drifter", "Wanderer"): (
         ("Athletics", 0), ("Deception", 0), ("Recon", 0), ("Stealth", 0), ("Streetwise", 0), ("Survival", 0),
         ("Str", 1), ("End", 1), ("Dex", 1), ("Jack of all Trades", 0), ("End", 1), ("Int", 1),
@@ -791,7 +791,7 @@ HOSTILE_SKILLS = {
         ("Str", 1), ("End", 1), ("Dex", 1), ("Jack of all Trades", 0), ("End", 1), ("Int", 1),
         ("Athletics", 0), ("Brawling", 0), ("Recon", 0), ("Streetwise", 0), ("Stealth", 0), ("Survival", 0),
         ("Pilot (small craft)", 0), ("Mechanic", 0), ("Astrogation", 0), ("Vacc Suit", 0), ("Zero-G", 0),
-        ("Gun Combat", 0)),
+        ("Gun Combat", 0))
 }
 
 RANKS = {
@@ -908,7 +908,7 @@ RANKS = {
     ("Navy Officer", "Engineering/Gunnery"):
         (None, ("Melee (blade)", 1), ("Leadership", 1), None, ("Tactics (naval)", 1), ("Soc", 1), ("Soc", 1)),
     ("Navy Officer", "Flight"):
-        (None, ("Melee (blade)", 2), ("Leadership", 1), None, ("Tactics (naval)", 1), ("Soc", 1), ("Soc", 1)),
+        (None, ("Melee (blade)", 2), ("Leadership", 1), None, ("Tactics (naval)", 1), ("Soc", 1), ("Soc", 1))
 }
 
 HOSTILE_RANKS = {
@@ -949,7 +949,7 @@ HOSTILE_RANKS = {
     ("Drifter", "Wanderer"):
         (None, ("Streetwise", 1), None, ("Deception", 1), None, None, None),
     ("Drifter", "Scavenger"):
-        (None, ("Vacc Suit", 1), None, ("Trade (belter) or Mechanic)", 1), None, None, None),
+        (None, ("Vacc Suit", 1), None, ("Trade (belter) or Mechanic)", 1), None, None, None)
 }
 
 BENEFITS = {
@@ -1064,7 +1064,7 @@ BENEFITS = {
                ("", None),
                ("", None),
                ("", None),
-               ("", None)),
+               ("", None))
 }
 
 HOSTILE_BENEFITS = {
@@ -1172,7 +1172,7 @@ HOSTILE_BENEFITS = {
                 ("Weapon", None),
                 ("Edu", 1),
                 ("Ship Shares", 1),
-                ("Ship Shares", 2)),
+                ("Ship Shares", 2))
 }
 
 CREDITS = {
@@ -1191,7 +1191,7 @@ CREDITS = {
     "Scout": (20000, 20000, 30000, 30000, 50000, 50000, 50000),
     "Explorer": (20000, 20000, 30000, 30000, 50000, 50000, 50000),
     "Psion": (1000, 2000, 4000, 4000, 8000, 8000, 16000),
-    "Warden": (1000, 2000, 5000, 7500, 10000, 25000, 50000),
+    "Warden": (1000, 2000, 5000, 7500, 10000, 25000, 50000)
 }
 
 HOSTILE_CREDITS = {
@@ -1209,7 +1209,7 @@ HOSTILE_CREDITS = {
     "Scientist": (500, 1000, 1000, 5000, 8000, 10000, 20000),
     "Survey Scout": (500, 1000, 1000, 5000, 8000, 10000, 20000),
     "Technician": (500, 1000, 1000, 5000, 8000, 10000, 20000),
-    "Drifter": (0, 0, 1000, 2000, 3000, 4000, 8000),
+    "Drifter": (0, 0, 1000, 2000, 3000, 4000, 8000)
 }
 
 AGING = (
@@ -1220,7 +1220,7 @@ AGING = (
     (2, 1, 1, 0),
     (2, 2, 1, 0),
     (2, 2, 2, 0),
-    (2, 2, 2, 1),
+    (2, 2, 2, 1)
 )
 
 PERSONALITIES = (
