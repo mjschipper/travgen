@@ -945,7 +945,7 @@ HOSTILE_RANKS = {
     ("Technician", "Freelance Miner"):
         (("Electronics or Mechanic)", 1), None, None, None, None, None, None),
     ("Drifter", "Barbarian"):
-        (None, ("Survival", 1), ("Melee (blade)", 1), None, ("Leadership", 1), None, None),
+        (None, ("Survival", 1), ("Blade Combat", 1), None, ("Leadership", 1), None, None),
     ("Drifter", "Wanderer"):
         (None, ("Streetwise", 1), None, ("Deception", 1), None, None, None),
     ("Drifter", "Scavenger"):
